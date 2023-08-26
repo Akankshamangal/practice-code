@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<string.h> 
+int main()
+{
+int i,n,k,a[50],count=0,j;
+printf("enter the value of n:");
+scanf("%d",&n);
+printf("enter value in array:");
+for(i=0;i<n;i++)
+{
+    scanf("%d",&a[i]);
+}
+printf("enter your target:");
+scanf("%d",&k);
+for(i=0;i<n;i++)
+{
+    for(j=i+1;j<n;j++)
+    {
+    if(a[i]+a[j]==k)
+    {
+        printf("pairs are:%d %d",a[i],a[j]);
+        count++;
+    }
+}
+}
+printf("pairs:%d",count);
+
+}
